@@ -59,10 +59,8 @@ sudo systemctl restart docker
     COPY target/*.jar userservice-0.0.1-SNAPSHOT.jar
     
     # Run the application
-    ENTRYPOINT ["java", "-jar", "userservice-0.0.1-SNAPSHOT.jar"]
+    ENTRYPOINT ["java", "-jar", "userservice-0.0.1-SNAPSHOT.jar", "--server.port=8080"]
     
-    # Expose port
-    EXPOSE 8080
 
    ```
 
